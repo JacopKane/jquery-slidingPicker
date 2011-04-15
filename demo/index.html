@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>jQuery SlidingPicker</title>
+    <!-- CSS stylesheets-->
+    <link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/calendar.css" media="all" />
+    <!-- CSS webfonts -->
+    <link rel="stylesheet" type="text/css" href="font/HelveticaNeue_Condensed/stylesheet.css" media="all" />
+    <!-- JS frameworks-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- JS plugins-->
+    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="../jquery.slidingPicker.js"></script>
+</head>
+<body>
+
+<div class="calendar_back clearfix">
+	<a class="calendar_item clearfix" href="#nisan17">
+		<span class="day_nr">17</span>
+		<span class="month_name">nisan</span>
+		<span class="day_name">Pz</span>
+	</a>
+	<a class="calendar_item clearfix" href="#nisan18">
+		<span class="day_nr">18</span>
+		<span class="month_name">nisan</span>
+		<span class="day_name">Pz</span>
+	</a>
+	<a class="calendar_item clearfix" href="#nisan19">
+		<span class="day_nr">19</span>
+		<span class="month_name">nisan</span>
+		<span class="day_name">Pz</span>
+	</a>
+	<a class="calendar_item clearfix" href="#nisan20">
+		<span class="day_nr">20</span>
+		<span class="month_name">nisan</span>
+		<span class="day_name">Pz</span>
+	</a>
+	<a class="calendar_item clearfix" href="#nisan21">
+		<span class="day_nr">21</span>
+		<span class="month_name">nisan</span>
+		<span class="day_name">Pz</span>
+	</a>
+	<a class="calendar_item disabled clearfix" href="#nisan22">
+		<span class="day_nr">22</span>
+		<span class="month_name">nisan</span>
+		<span class="day_name">Pz</span>
+	</a>
+	<a class="calendar_item disabled clearfix" href="#nisan23">
+		<span class="day_nr">23</span>
+		<span class="month_name">nisan</span>
+		<span class="day_name">Pz</span>
+	</a>
+</div><!--/calendar_back-->
+
+<div class="calendar_front_wrapper">
+	<div class="calendar_front clearfix">
+		<a class="calendar_item clearfix" href="javascript:void(0);">
+			<span class="day_nr">17</span>
+			<span class="month_name">nisan</span>
+			<span class="day_name">Pz</span>
+		</a>
+		<a class="calendar_item clearfix" href="javascript:void(0);">
+			<span class="day_nr">18</span>
+			<span class="month_name">nisan</span>
+			<span class="day_name">Pz</span>
+		</a>
+		<a class="calendar_item clearfix" href="javascript:void(0);">
+			<span class="day_nr">19</span>
+			<span class="month_name">nisan</span>
+			<span class="day_name">Pz</span>
+		</a>
+		<a class="calendar_item clearfix" href="javascript:void(0);">
+			<span class="day_nr">20</span>
+			<span class="month_name">nisan</span>
+			<span class="day_name">Pz</span>
+		</a>
+		<a class="calendar_item clearfix" href="javascript:void(0);">
+			<span class="day_nr">21</span>
+			<span class="month_name">nisan</span>
+			<span class="day_name">Pz</span>
+		</a>
+		<a class="calendar_item clearfix" href="javascript:void(0);">
+			<span class="day_nr">22</span>
+			<span class="month_name">nisan</span>
+			<span class="day_name">Pz</span>
+		</a>
+		<a class="calendar_item clearfix" href="javascript:void(0);">
+			<span class="day_nr">23</span>
+			<span class="month_name">nisan</span>
+			<span class="day_name">Pz</span>
+		</a>
+	</div><!--/calendar_front-->
+</div><!--/calendar_front_wrapper-->
+<div class="calendar_front_mask"></div>
+
+<script type="text/javascript">
+  /* Defining calendar */
+  $('div.calendar_back').slidingPicker({
+		elements	: {
+			front		: 'div.calendar_front_wrapper',
+			front_mask	: 'div.calendar_front_mask'
+		},
+		currentItem	: urlIsset() ? getParamLength() : 0,
+		animation	: { easing : 'easeOutBack' },
+		beforeSlide	: function(position) {  },
+		afterSlide	: function(position) { getContent(position); }
+	});
+
+	/* extra functions for demo */
+	function urlIsset() { return (window.location.href.match('#') && window.location.href.match('nisan') && $('div#' + getUrlParam()).length); }
+function getUrlParam() {
+	var href = window.location.href.split('#');
+	return href[1].replace("nisan", "nisan_");
+}
+function getParamLength() {
+	var paramLength = 0;
+	$('div.date_wrap').each(function(i) {
+		if($(this).attr('id') == getUrlParam()) {
+			paramLength = i;
+		}
+	});
+	return paramLength;
+}
+</script>
+</body>
+</html>
+

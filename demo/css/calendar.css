@@ -1,0 +1,110 @@
+body {
+    font: 62.5%/1.2em Helvetica, Arial, serif; font-weight: normal; font-style: normal;
+}
+
+div.calendar_back a.calendar_item,
+div.calendar_back a.calendar_item:active,
+div.calendar_back a.calendar_item:link,
+div.calendar_back a.calendar_item:visited,
+div.calendar_back a.calendar_item:hover,
+div.calendar_back a.calendar_item:focus,
+div.calendar_front a.calendar_item,
+div.calendar_front a.calendar_item:active,
+div.calendar_front a.calendar_item:link,
+div.calendar_front a.calendar_item:visited,
+div.calendar_front a.calendar_item:hover,
+div.calendar_front a.calendar_item:focus {
+	color:black; font-size:1em;
+	width:133px; height:82px;  display:block; float:left;
+}
+div.calendar_back a.calendar_item:hover { text-decoration:none; color:#ffa200; }
+
+div.calendar_front a.calendar_item,
+div.calendar_front a.calendar_item:active,
+div.calendar_front a.calendar_item:link,
+div.calendar_front a.calendar_item:visited,
+div.calendar_front a.calendar_item:hover,
+div.calendar_front a.calendar_item:focus { text-decoration:none; color:#ffa200; cursor:default; }
+
+div.calendar_back a.calendar_item span.day_nr,
+div.calendar_back a.calendar_item:active span.day_nr,
+div.calendar_back a.calendar_item:link span.day_nr,
+div.calendar_back a.calendar_item:visited span.day_nr,
+div.calendar_back a.calendar_item:hover span.day_nr,
+div.calendar_back a.calendar_item:focus span.day_nr,
+div.calendar_front a.calendar_item span.day_nr,
+div.calendar_front a.calendar_item:active span.day_nr,
+div.calendar_front a.calendar_item:link span.day_nr,
+div.calendar_front a.calendar_item:visited span.day_nr,
+div.calendar_front a.calendar_item:hover span.day_nr,
+div.calendar_front a.calendar_item:focus span.day_nr {
+	font:4.3em 'HelveticaNeueHeavyCond', Helvetica, Arial, sans-serif; line-height:82px; text-align:right;
+	width:64px; float:left;
+}
+div.calendar_front a.calendar_item span.day_nr,
+div.calendar_front a.calendar_item:active span.day_nr,
+div.calendar_front a.calendar_item:link span.day_nr,
+div.calendar_front a.calendar_item:visited span.day_nr,
+div.calendar_front a.calendar_item:hover span.day_nr,
+div.calendar_front a.calendar_item:focus span.day_nr { color:#ffa200; }
+
+div.calendar_back a.calendar_item span.month_name,
+div.calendar_back a.calendar_item:active span.month_name,
+div.calendar_back a.calendar_item:link span.month_name,
+div.calendar_back a.calendar_item:visited span.month_name,
+div.calendar_back a.calendar_item:hover span.month_name,
+div.calendar_back a.calendar_item:focus span.month_name,
+div.calendar_front a.calendar_item span.month_name,
+div.calendar_front a.calendar_item:active span.month_name,
+div.calendar_front a.calendar_item:link span.month_name,
+div.calendar_front a.calendar_item:visited span.month_name,
+div.calendar_front a.calendar_item:hover span.month_name,
+div.calendar_front a.calendar_item:focus span.month_name {
+	font:1.8em 'HelveticaNeueMediumCond', Helvetica, Arial, sans-serif; text-align:left; line-height:1.6em;
+	float:right; width:64px; height:16px; padding-top:17px;
+}
+div.calendar_front a.calendar_item span.month_name,
+div.calendar_front a.calendar_item:active span.month_name,
+div.calendar_front a.calendar_item:link span.month_name,
+div.calendar_front a.calendar_item:visited span.month_name,
+div.calendar_front a.calendar_item:hover span.month_name,
+div.calendar_front a.calendar_item:focus span.month_name { color:#ffa200; }
+
+div.calendar_back a.calendar_item span.day_name,
+div.calendar_back a.calendar_item:active span.day_name,
+div.calendar_back a.calendar_item:link span.day_name,
+div.calendar_back a.calendar_item:visited span.day_name,
+div.calendar_back a.calendar_item:hover span.day_name,
+div.calendar_back a.calendar_item:focus span.day_name,
+div.calendar_front a.calendar_item span.day_name,
+div.calendar_front a.calendar_item:active span.day_name,
+div.calendar_front a.calendar_item:link span.day_name,
+div.calendar_front a.calendar_item:visited span.day_name,
+div.calendar_front a.calendar_item:hover span.day_name,
+div.calendar_front a.calendar_item:focus span.day_name {
+	font:1.8em 'HelveticaNeueMediumCond', Helvetica, Arial, sans-serif; color:#858585; text-align:left; line-height:1.76em;
+	float:right; width:64px; height:16px;
+}
+
+div.calendar_back a.calendar_item.disabled,
+div.calendar_back a.calendar_item.disabled:active,
+div.calendar_back a.calendar_item.disabled:link,
+div.calendar_back a.calendar_item.disabled:visited,
+div.calendar_back a.calendar_item.disabled:hover,
+div.calendar_back a.calendar_item.disabled:focus,
+div.calendar_front a.calendar_item.disabled,
+div.calendar_front a.calendar_item.disabled:active,
+div.calendar_front a.calendar_item.disabled:link,
+div.calendar_front a.calendar_item.disabled:visited,
+div.calendar_front a.calendar_item.disabled:hover,
+div.calendar_front a.calendar_item.disabled:focus { color:#666; cursor:default;  }
+
+div.calendar_back, div.calendar_front { width:944px; height:82px; }
+div.calendar_back { z-index:100; top:100px; left:50%; margin-left:-490px; position:absolute; }
+div.calendar_front { padding:0 400px; background:#242424; }
+div.calendar_front_wrapper, div.calendar_front_mask {
+	width:133px; height:96px; overflow:hidden;
+	position:absolute; z-index:200; top:100px; left:50%; margin-left:-490px;
+}
+div.calendar_front_mask { width:133px; height:96px; background:url(../img/calendar_picker.background.png) transparent; z-index:300; }
+

@@ -1,0 +1,141 @@
+/* common & reset */
+
+/* reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+input, select, textarea,
+table, caption, tbody, tfoot, thead, tr, th, td
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+	background:none;
+	outline:none;
+}
+
+html,body{margin:0;}
+
+:focus
+{
+	outline: 0;
+}
+
+body
+{
+	line-height: 1;
+	color: black;
+	background: white;
+}
+
+ol, ul
+{
+	list-style: none;
+}
+
+table
+{
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+caption, th, td
+{
+	text-align: left;
+	font-weight: normal;
+}
+
+blockquote:before,
+blockquote:after,
+q:before, q:after
+{
+	content: "";
+}
+
+blockquote, q
+{
+	quotes: "" "";
+}
+
+/*clearfix*/
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix 
+{
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix
+{
+	display: block;
+}
+ 
+* html .clearfix
+{
+	height: 1%;
+}
+
+.ie .clearfix
+{
+	zoom: 1;
+}
+
+/*common*/
+
+a,
+a:active,
+a:link,
+a:focus,
+a:visited,
+a:hover,
+a img
+{
+	cursor:pointer;
+	border:none;
+	outline:none;
+	text-decoration:none;
+	font-size:1em;
+}
+
+a.selected,
+a.selected:active,
+a.selected:link,
+a.selected:focus,
+a.selected:visited,
+a.selected:hover,
+a.selected img
+{
+	cursor:default;
+}
+
+div.textareaContainer
+{
+	background-position:top left;
+	background-repeat:no-repeat;
+}
+
+.floatLeft{float:left;}
+.floatRight{float:right;}
+.overHidden{overflow:hidden;}
+.marginMiddle{margin:0 auto;}
+.remove{display:none;}
+.noBorder{border:none;}
+.selected{cursor:default;}
+.inlineClear{clear:both;}
