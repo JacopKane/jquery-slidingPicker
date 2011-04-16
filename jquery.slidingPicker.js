@@ -1,3 +1,12 @@
+/*!
+ * jQuery Sliding Picker
+ * Furkan Tunalı
+ *
+ * http://www.furkantunali.com/common/created-a-jquery-slidingpicker-plugin/#POST
+ *
+ */
+ 
+
 var _slidingPickerDefaults = {
 	isset		: false,
 	elements	: {
@@ -90,7 +99,7 @@ var _slidingPickerDefaults = {
 		settings.animation.step = function(now, fx) {
 			jQuery(settings.elements.front)
 				.css('left', now + 'px')
-				.children(settings.elements.inner_front).css('margin-left', (0 - (now - settings.offset.left + settings.widthDiffer)) + 'px');
+				.children('div').css('margin-left', (0 - (now - settings.offset.left + settings.widthDiffer)) + 'px');
 		};
 
 		settings.animation.complete = function() {
@@ -104,4 +113,3 @@ var _slidingPickerDefaults = {
 		}, settings.animation);
 	};
 })(jQuery);
-

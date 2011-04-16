@@ -1,5 +1,6 @@
 body {
     font: 62.5%/1.2em Helvetica, Arial, serif; font-weight: normal; font-style: normal;
+    background:url(../img/back.jpg) no-repeat top center;
 }
 
 div.calendar_back a.calendar_item,
@@ -99,12 +100,12 @@ div.calendar_front a.calendar_item.disabled:visited,
 div.calendar_front a.calendar_item.disabled:hover,
 div.calendar_front a.calendar_item.disabled:focus { color:#666; cursor:default;  }
 
-div.calendar_back, div.calendar_front { width:944px; height:82px; }
-div.calendar_back { z-index:100; top:100px; left:50%; margin-left:-490px; position:absolute; }
+div.calendar_back, div.calendar_front { width:1000px; height:82px; }
+div.calendar_back { z-index:100; top:159px; left:50%; margin-left:-470px; position:absolute; }
 div.calendar_front { padding:0 400px; background:#242424; }
 div.calendar_front_wrapper, div.calendar_front_mask {
 	width:133px; height:96px; overflow:hidden;
-	position:absolute; z-index:200; top:100px; left:50%; margin-left:-490px;
+	position:absolute; z-index:200; top:159px; left:50%; margin-left:-500px;
 }
 div.calendar_front_mask { width:133px; height:96px; background:url(../img/calendar_picker.background.png) transparent; z-index:300; }
 

@@ -25,32 +25,32 @@
 	<a class="calendar_item clearfix" href="#nisan18">
 		<span class="day_nr">18</span>
 		<span class="month_name">nisan</span>
-		<span class="day_name">Pz</span>
+		<span class="day_name">Pzt</span>
 	</a>
 	<a class="calendar_item clearfix" href="#nisan19">
 		<span class="day_nr">19</span>
 		<span class="month_name">nisan</span>
-		<span class="day_name">Pz</span>
+		<span class="day_name">Sl</span>
 	</a>
 	<a class="calendar_item clearfix" href="#nisan20">
 		<span class="day_nr">20</span>
 		<span class="month_name">nisan</span>
-		<span class="day_name">Pz</span>
+		<span class="day_name">Çrş</span>
 	</a>
 	<a class="calendar_item clearfix" href="#nisan21">
 		<span class="day_nr">21</span>
 		<span class="month_name">nisan</span>
-		<span class="day_name">Pz</span>
+		<span class="day_name">Prş</span>
 	</a>
 	<a class="calendar_item disabled clearfix" href="#nisan22">
 		<span class="day_nr">22</span>
 		<span class="month_name">nisan</span>
-		<span class="day_name">Pz</span>
+		<span class="day_name">Cm</span>
 	</a>
 	<a class="calendar_item disabled clearfix" href="#nisan23">
 		<span class="day_nr">23</span>
 		<span class="month_name">nisan</span>
-		<span class="day_name">Pz</span>
+		<span class="day_name">Cmt</span>
 	</a>
 </div><!--/calendar_back-->
 
@@ -96,7 +96,9 @@
 <div class="calendar_front_mask"></div>
 
 <script type="text/javascript">
-  /* Defining calendar */
+
+/* Defining slidingPicker */
+$(document).ready(function() {
   $('div.calendar_back').slidingPicker({
 		elements	: {
 			front		: 'div.calendar_front_wrapper',
@@ -105,15 +107,18 @@
 		currentItem	: urlIsset() ? getParamLength() : 0,
 		animation	: { easing : 'easeOutBack' },
 		beforeSlide	: function(position) {  },
-		afterSlide	: function(position) { getContent(position); }
+		afterSlide	: function(position) {  }
 	});
+});
 
-	/* extra functions for demo */
-	function urlIsset() { return (window.location.href.match('#') && window.location.href.match('nisan') && $('div#' + getUrlParam()).length); }
+/* extra functions for setting day with url */
+function urlIsset() { return (window.location.href.match('#') && window.location.href.match('nisan') && $('div#' + getUrlParam()).length); }
+
 function getUrlParam() {
 	var href = window.location.href.split('#');
 	return href[1].replace("nisan", "nisan_");
 }
+
 function getParamLength() {
 	var paramLength = 0;
 	$('div.date_wrap').each(function(i) {
