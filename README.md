@@ -18,4 +18,4 @@ Example setup:
 	});
 
 
-For more info you can check the An [blog post](http://www.furkantunali.com/common/created-a-jquery-slidingpicker-plugin/#POST "jQuery slidingPicker plugin") about this plugin.
+For more info you can check the [blog post](http://www.furkantunali.com/common/created-a-jquery-slidingpicker-plugin/#POST "jQuery slidingPicker plugin") about this plugin.
